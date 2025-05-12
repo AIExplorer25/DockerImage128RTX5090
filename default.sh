@@ -71,6 +71,27 @@ huggingface-cli download techparasite/necklace vitmatte-20250323T105902Z-001.zip
 unzip ${COMFYUI_DIR}/models/vitmatte/vitmatte-20250323T105902Z-001.zip -d ${COMFYUI_DIR}/models/vitmatte/
 huggingface-cli download techparasite/necklace segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip --local-dir ${COMFYUI_DIR}/models/inpaint/
 unzip ${COMFYUI_DIR}/models/inpaint/segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip -d ${COMFYUI_DIR}/models/inpaint/
+
+
+huggingface-cli download techparasite/necklace XL_Apex_XL_v4.safetensors --local-dir ${COMFYUI_DIR}/models/checkpoints/
+
+huggingface-cli download Kijai/WanVideo_comfy Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
+huggingface-cli download Kijai/WanVideo_comfy Wan2_1_VAE_fp32.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
+
+
+huggingface-cli download Kijai/WanVideo_comfy Wan2_1_VAE_bf16.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
+huggingface-cli download Kijai/WanVideo_comfy open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
+
+huggingface-cli download Kijai/WanVideo_comfy umt5-xxl-enc-bf16.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
+
+
+huggingface-cli download gemasai/4x_NMKD-Siax_200k --local-dir ${COMFYUI_DIR}/models/upscale_models/
+
+huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
+
+huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/clip_vision/clip_vision_h.safetensors --local-dir ${COMFYUI_DIR}/models/clip_vision/
+
+huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/vae/wan_2.1_vae.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
