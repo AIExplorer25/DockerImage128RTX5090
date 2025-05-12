@@ -5,9 +5,13 @@ source /venv/main/bin/activate
 pip install ninja
 
 TORCH_CUDA_ARCH_LIST=12.0  /venv/main/bin/pip install -v --no-deps git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
-
+pip install huggingface_hub[hf_transfer]
+pip install hf_transfer
 
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
+
+huggingface-cli download xinsir/controlnet-openpose-sdxl-1.0 diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
+mv ${COMFYUI_DIR}/models/controlnet/diffusion_pytorch_model.safetensors ${COMFYUI_DIR}/models/controlnet/xinsir-ontrolnet-openpose-sdxl-1.0.safetensors
 
 # Packages are installed after nodes so we can fix them...
 
