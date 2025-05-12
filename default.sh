@@ -13,6 +13,64 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 huggingface-cli download xinsir/controlnet-openpose-sdxl-1.0 diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
 mv ${COMFYUI_DIR}/models/controlnet/diffusion_pytorch_model.safetensors ${COMFYUI_DIR}/models/controlnet/xinsir-ontrolnet-openpose-sdxl-1.0.safetensors
 
+
+huggingface-cli download xinsir/controlnet-openpose-sdxl-1.0 diffusion_pytorch_model_twins.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
+mv ${COMFYUI_DIR}/models/controlnet/diffusion_pytorch_model_twins.safetensors ${COMFYUI_DIR}/models/controlnet/xinsir-ontrolnet-openpose-sdxl-1.0_twins.safetensors
+
+
+
+huggingface-cli download xinsir/controlnet-depth-sdxl-1.0 diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
+mv ${COMFYUI_DIR}/models/controlnet/diffusion_pytorch_model.safetensors ${COMFYUI_DIR}/models/controlnet/controlnet-depth-sdxl-1.0.safetensors
+
+
+huggingface-cli download Comfy-Org/flux1-dev flux1-dev-fp8.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
+
+
+huggingface-cli download comfyanonymous/flux_text_encoders --local-dir ${COMFYUI_DIR}/models/clip/
+
+
+huggingface-cli download Kijai/DepthAnythingV2-safetensors --local-dir ${COMFYUI_DIR}/models/depthanything
+
+
+huggingface-cli download black-forest-labs/FLUX.1-Redux-dev flux1-redux-dev.safetensors --local-dir ${COMFYUI_DIR}/models/style_models/
+
+huggingface-cli download black-forest-labs/FLUX.1-schnell ae.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
+
+
+
+huggingface-cli download h94/IP-Adapter --local-dir ${COMFYUI_DIR}/models/ipadapter/
+
+huggingface-cli download h94/IP-Adapter-FaceID --local-dir ${COMFYUI_DIR}/models/ipadapter/
+
+cp ${COMFYUI_DIR}/models/ipadapter/ip-adapter-faceid_sd15_lora.safetensors ${COMFYUI_DIR}/models/loras/
+cp ${COMFYUI_DIR}/models/ipadapter/ip-adapter-faceid-plusv2_sd15_lora.safetensors ${COMFYUI_DIR}/models/loras/
+cp ${COMFYUI_DIR}/models/ipadapter/ip-adapter-faceid_sdxl_lora.safetensors ${COMFYUI_DIR}/models/loras/
+cp ${COMFYUI_DIR}/models/ipadapter/ip-adapter-faceid-plusv2_sdxl_lora.safetensors ${COMFYUI_DIR}/models/loras/
+cp ${COMFYUI_DIR}/models/ipadapter/ip-adapter-faceid-plus_sd15_lora.safetensors ${COMFYUI_DIR}/models/loras/
+
+
+huggingface-cli download laion/CLIP-ViT-H-14-laion2B-s32B-b79K model.safetensors --local-dir ${COMFYUI_DIR}/models/clip_vision/
+
+mv ${COMFYUI_DIR}/models/clip_vision/model.safetensors ${COMFYUI_DIR}/models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors
+
+#CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors is inside  /workspace/ComfyUI/models/ipadapter/sdxl_models/image_encoder/model.safetensors
+
+cp ComfyUI/models/ipadapter/sdxl_models/image_encoder/model.safetensors ComfyUI/models/clip_vision/
+mv ${COMFYUI_DIR}/models/clip_vision/model.safetensors ${COMFYUI_DIR}/models/clip_vision/CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors
+
+huggingface-cli download HCMUE-Research/SAM-vit-h sam_vit_h_4b8939.pth --local-dir ${COMFYUI_DIR}/models/sams/
+
+huggingface-cli download techparasite/necklace IC_TRY_ON_v3_e4.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+
+huggingface-cli download techparasite/necklace sigclip_vision_patch14_384.safetensors --local-dir ${COMFYUI_DIR}/models/clip_vision/
+
+huggingface-cli download techparasite/necklace XL_Apex_XL_v4.safetensors --local-dir ${COMFYUI_DIR}/models/checkpoints/
+
+
+huggingface-cli download techparasite/necklace vitmatte-20250323T105902Z-001.zip --local-dir ${COMFYUI_DIR}/models/vitmatte/
+unzip ${COMFYUI_DIR}/models/vitmatte/vitmatte-20250323T105902Z-001.zip
+huggingface-cli download techparasite/necklace segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip --local-dir ${COMFYUI_DIR}/models/inpaint/
+unzip ${COMFYUI_DIR}/models/inpaint/segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
