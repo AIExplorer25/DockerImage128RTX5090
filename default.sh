@@ -2,8 +2,8 @@
 
 source /venv/main/bin/activate
 
-pip3 install ninja
-TORCH_CUDA_ARCH_LIST=12.0 pip3 install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+pip install ninja
+
 
 
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
