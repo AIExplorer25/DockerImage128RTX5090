@@ -3,7 +3,8 @@
 source /venv/main/bin/activate
 
 pip install ninja
-TORCH_CUDA_ARCH_LIST=12.0  /venv/main/bin/pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+
+TORCH_CUDA_ARCH_LIST=12.0  /venv/main/bin/pip install -v --no-deps git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 
 
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
