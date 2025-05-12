@@ -7,7 +7,7 @@ pip install ninja
 TORCH_CUDA_ARCH_LIST=12.0  /venv/main/bin/pip install -v --no-deps git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 pip install huggingface_hub[hf_transfer]
 pip install hf_transfer
-
+pip install -U accelerate==0.32.0
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 huggingface-cli download xinsir/controlnet-openpose-sdxl-1.0 diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
@@ -68,9 +68,9 @@ huggingface-cli download techparasite/necklace XL_Apex_XL_v4.safetensors --local
 
 
 huggingface-cli download techparasite/necklace vitmatte-20250323T105902Z-001.zip --local-dir ${COMFYUI_DIR}/models/vitmatte/
-unzip ${COMFYUI_DIR}/models/vitmatte/vitmatte-20250323T105902Z-001.zip
+unzip ${COMFYUI_DIR}/models/vitmatte/vitmatte-20250323T105902Z-001.zip -d ${COMFYUI_DIR}/models/vitmatte/
 huggingface-cli download techparasite/necklace segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip --local-dir ${COMFYUI_DIR}/models/inpaint/
-unzip ${COMFYUI_DIR}/models/inpaint/segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip
+unzip ${COMFYUI_DIR}/models/inpaint/segmentation_mask_brushnet_ckpt_sdxl_v0-20240907T113638Z-001-20250323T105307Z-001.zip -d ${COMFYUI_DIR}/models/inpaint/
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
