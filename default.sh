@@ -7,6 +7,8 @@ pip install ninja
 TORCH_CUDA_ARCH_LIST=12.0  /venv/main/bin/pip install -v --no-deps git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 pip install huggingface_hub[hf_transfer]
 pip install hf_transfer
+huggingface-cli login --token $HF_TOKEN
+export HF_HUB_ENABLE_HF_TRANSFER=1
 pip install -U accelerate==0.32.0
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
