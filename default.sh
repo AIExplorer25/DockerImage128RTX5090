@@ -107,8 +107,24 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    #"https://github.com/ltdrdata/ComfyUI-Manager"
-    #"https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    "https://github.com/chflame163/ComfyUI_LayerStyle"
+    "https://github.com/storyicon/comfyui_segment_anything"
+    "https://github.com/nullquant/ComfyUI-BrushNet"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/kijai/ComfyUI-Florence2"
+    "https://github.com/kijai/ComfyUI-IC-Light"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/lrzjason/Comfyui-In-Context-Lora-Utils"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/MixLabPro/comfyui-mixlab-nodes"
+    "https://github.com/omar92/ComfyUI-QualityOfLifeSuit_Omar92"
+    "https://github.com/kijai/ComfyUI-segment-anything-2"
+    "https://github.com/rgthree/rgthree-comfy"
 )
 
 WORKFLOWS=(
@@ -177,7 +193,7 @@ function provisioning_get_pip_packages() {
 function provisioning_get_nodes() {
     for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
-        path="${COMFYUI_DIR}custom_nodes/${dir}"
+        path="${COMFYUI_DIR}/custom_nodes/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
