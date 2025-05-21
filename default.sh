@@ -125,6 +125,8 @@ NODES=(
     "https://github.com/omar92/ComfyUI-QualityOfLifeSuit_Omar92"
     "https://github.com/kijai/ComfyUI-segment-anything-2"
     "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+    
 )
 
 WORKFLOWS=(
