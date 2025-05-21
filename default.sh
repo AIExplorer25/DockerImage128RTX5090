@@ -289,3 +289,5 @@ function provisioning_download() {
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
 fi
+
+pip install -U accelerate
