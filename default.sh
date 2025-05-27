@@ -77,6 +77,23 @@ unzip ${COMFYUI_DIR}/models/inpaint/segmentation_mask_brushnet_ckpt_sdxl_v0-2024
 
 huggingface-cli download techparasite/necklace XL_Apex_XL_v4.safetensors --local-dir ${COMFYUI_DIR}/models/checkpoints/
 
+huggingface-cli download Ultimatech/rosary 8StepsCreartHyperFlux_creartUltimate.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
+huggingface-cli download Ultimatech/rosary rosary_flux.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary rosary_xl-000008.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary ACE++ Subject图案迁移.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary 【摸鱼】商业写实渲染 _ 电商产品场景 _V1.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+
+huggingface-cli download Ultimatech/rosary 真境写真XL Elite KV _ 电商产品摄影海报视觉设计_VisionX Elite.safetensors --local-dir ${COMFYUI_DIR}/models/checkpoints/
+huggingface-cli download Ultimatech/rosary flex1_redux_siglip2_512.safetensors --local-dir ${COMFYUI_DIR}/models/style_models/
+huggingface-cli download Ultimatech/rosary siglip2_so400m_patch16_512.safetensors --local-dir ${COMFYUI_DIR}/models/style_models/
+
+huggingface-cli download Ultimatech/rosary xinsir_controlnet-canny-sdxl-1.0_v2.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
+huggingface-cli download Ultimatech/rosary flux-controlnet-canny.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
+huggingface-cli download Ultimatech/rosary xinsir_controlnet-depth-sdxl-1.0.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
+huggingface-cli download Ultimatech/rosary segmentation_mask_brushnet_ckpt_sdxl_v1-20250329T134055Z-001/segmentation_mask_brushnet_ckpt_sdxl_v1/diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/inpaint/
+
+
+
 huggingface-cli download Kijai/WanVideo_comfy Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
 huggingface-cli download Kijai/WanVideo_comfy Wan2_1_VAE_fp32.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
 
