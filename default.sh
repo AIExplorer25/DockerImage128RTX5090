@@ -111,7 +111,7 @@ huggingface-cli download Ultimatech/rosary "【摸鱼】商业写实渲染 _ 电
 
 huggingface-cli download Ultimatech/rosary "真境写真XL Elite KV _ 电商产品摄影海报视觉设计_VisionX Elite.safetensors"  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/checkpoints/
 huggingface-cli download Ultimatech/rosary flex1_redux_siglip2_512.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/style_models/
-huggingface-cli download Ultimatech/rosary siglip2_so400m_patch16_512.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/style_models/
+huggingface-cli download Ultimatech/rosary siglip2_so400m_patch16_512.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/clip_vision/
 
 huggingface-cli download Ultimatech/rosary xinsir_controlnet-canny-sdxl-1.0_v2.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/controlnet/
 huggingface-cli download Ultimatech/rosary flux-controlnet-canny.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/controlnet/
