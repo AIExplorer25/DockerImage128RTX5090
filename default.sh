@@ -12,6 +12,10 @@ export HF_HUB_ENABLE_HF_TRANSFER=1
 pip install -U accelerate==0.32.0
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
+
+huggingface-cli download Ultimatech/rosary 8StepsCreartHyperFlux_creartUltimate.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/unet/
+huggingface-cli download Ultimatech/rosary rosary_flux.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
+
 huggingface-cli download xinsir/controlnet-openpose-sdxl-1.0 diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
 mv ${COMFYUI_DIR}/models/controlnet/diffusion_pytorch_model.safetensors ${COMFYUI_DIR}/models/controlnet/xinsir-ontrolnet-openpose-sdxl-1.0.safetensors
 
@@ -98,11 +102,9 @@ huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/clip_v
 
 huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/vae/wan_2.1_vae.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
 
-huggingface-cli logout
 
 
-huggingface-cli download Ultimatech/rosary 8StepsCreartHyperFlux_creartUltimate.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/unet/
-huggingface-cli download Ultimatech/rosary rosary_flux.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
+
 huggingface-cli download Ultimatech/rosary rosary_xl-000008.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
 huggingface-cli download Ultimatech/rosary ACE++ Subject图案迁移.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
 huggingface-cli download Ultimatech/rosary 【摸鱼】商业写实渲染 _ 电商产品场景 _V1.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
