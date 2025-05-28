@@ -101,20 +101,20 @@ huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/vae/wa
 huggingface-cli logout
 
 
-huggingface-cli download Ultimatech/rosary 8StepsCreartHyperFlux_creartUltimate.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
-huggingface-cli download Ultimatech/rosary rosary_flux.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
-huggingface-cli download Ultimatech/rosary rosary_xl-000008.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
-huggingface-cli download Ultimatech/rosary ACE++ Subject图案迁移.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
-huggingface-cli download Ultimatech/rosary 【摸鱼】商业写实渲染 _ 电商产品场景 _V1.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary 8StepsCreartHyperFlux_creartUltimate.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/unet/
+huggingface-cli download Ultimatech/rosary rosary_flux.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary rosary_xl-000008.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary ACE++ Subject图案迁移.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
+huggingface-cli download Ultimatech/rosary 【摸鱼】商业写实渲染 _ 电商产品场景 _V1.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
 
-huggingface-cli download Ultimatech/rosary 真境写真XL Elite KV _ 电商产品摄影海报视觉设计_VisionX Elite.safetensors --local-dir ${COMFYUI_DIR}/models/checkpoints/
-huggingface-cli download Ultimatech/rosary flex1_redux_siglip2_512.safetensors --local-dir ${COMFYUI_DIR}/models/style_models/
-huggingface-cli download Ultimatech/rosary siglip2_so400m_patch16_512.safetensors --local-dir ${COMFYUI_DIR}/models/style_models/
+huggingface-cli download Ultimatech/rosary 真境写真XL Elite KV _ 电商产品摄影海报视觉设计_VisionX Elite.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/checkpoints/
+huggingface-cli download Ultimatech/rosary flex1_redux_siglip2_512.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/style_models/
+huggingface-cli download Ultimatech/rosary siglip2_so400m_patch16_512.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/style_models/
 
-huggingface-cli download Ultimatech/rosary xinsir_controlnet-canny-sdxl-1.0_v2.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
-huggingface-cli download Ultimatech/rosary flux-controlnet-canny.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
-huggingface-cli download Ultimatech/rosary xinsir_controlnet-depth-sdxl-1.0.safetensors --local-dir ${COMFYUI_DIR}/models/controlnet/
-huggingface-cli download Ultimatech/rosary segmentation_mask_brushnet_ckpt_sdxl_v1-20250329T134055Z-001/segmentation_mask_brushnet_ckpt_sdxl_v1/diffusion_pytorch_model.safetensors --local-dir ${COMFYUI_DIR}/models/inpaint/
+huggingface-cli download Ultimatech/rosary xinsir_controlnet-canny-sdxl-1.0_v2.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/controlnet/
+huggingface-cli download Ultimatech/rosary flux-controlnet-canny.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/controlnet/
+huggingface-cli download Ultimatech/rosary xinsir_controlnet-depth-sdxl-1.0.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/controlnet/
+huggingface-cli download Ultimatech/rosary segmentation_mask_brushnet_ckpt_sdxl_v1-20250329T134055Z-001/segmentation_mask_brushnet_ckpt_sdxl_v1/diffusion_pytorch_model.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/inpaint/
 
 # Packages are installed after nodes so we can fix them...
 
@@ -148,7 +148,14 @@ NODES=(
     "https://github.com/kijai/ComfyUI-segment-anything-2"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
-    
+    "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/mingsky-ai/ComfyUI-MingNodes"
+    "https://github.com/kijai/ComfyUI-LBMWrapper"
+    "https://github.com/logtd/ComfyUI-Fluxtapoz"
+    "https://github.com/sipherxyz/comfyui-art-venture"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+    "https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
+    "https://github.com/siliconflow/BizyAir"    
 )
 
 WORKFLOWS=(
