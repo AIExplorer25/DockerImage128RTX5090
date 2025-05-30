@@ -105,6 +105,9 @@ huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged split_files/vae/wa
 
 
 
+huggingface-cli download jasperai/LBM_relighting model.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/diffusion_models/
+huggingface-cli download yiwangsimple/BiRefNet-general-epoch_244 BiRefNet-general-epoch_244.pth  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/BiRefNet/pth/
+
 huggingface-cli download Ultimatech/rosary rosary_xl-000008.safetensors  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
 huggingface-cli download Ultimatech/rosary "ACE++ Subject图案迁移.safetensors"  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
 huggingface-cli download Ultimatech/rosary "【摸鱼】商业写实渲染 _ 电商产品场景 _V1.safetensors"  --repo-type dataset --local-dir ${COMFYUI_DIR}/models/loras/
